@@ -1,3 +1,18 @@
-<p>
-  heroes works!
-</p>
+<h1>HEROES</h1>
+<hr /> 
+
+<div class="card-columns">
+
+    <div class="card" *ngFor="let item of heroes">
+        <img class="card-img-top" [src]="item.img" [alt]="item.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{item.nombre}} - {{item.casa}}</h5>
+          <p class="card-text">{{item.bio}}</p>
+          <p class="card-text"><small class="text-muted">{{item.aparicion}}</small></p>
+          <button class="btn btn-outline-primary btn-block" type="button">
+            Ver Mas
+          </button>
+        </div>
+      </div>
+
+</div>
