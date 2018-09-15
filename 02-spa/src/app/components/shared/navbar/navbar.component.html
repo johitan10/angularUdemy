@@ -20,8 +20,11 @@
       
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar Heroe" aria-label="Search" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="buscarHeroe(buscarTexto.value)">Buscar</button>
+        <input class="form-control mr-sm-2" type="text" placeholder="Buscar héroe" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto>
+        <button (click)="buscarHeroe(buscarTexto.value)"
+            class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar</button>
+     <!--  <input class="form-control mr-sm-2" type="text" placeholder="Buscar héroe" (keyup.enter)="buscarHeroe(buscarTexto2.value)" #buscarTexto2>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="buscarHeroe(buscarTexto2.value)">Buscar</button> -->
     </form>
   </div>
 </nav>
