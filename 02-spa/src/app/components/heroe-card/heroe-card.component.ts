@@ -11,7 +11,11 @@ export class HeroeCardComponent implements OnInit {
   @Input() heroeParametro:Heroe;
   @Input() idx:number;
 
-  constructor(private router:Router) { }
+  
+
+  constructor(private router:Router) {
+    
+   }
 
   ngOnInit() {
   }
