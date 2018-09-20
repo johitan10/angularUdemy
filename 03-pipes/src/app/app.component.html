@@ -58,14 +58,77 @@
         <td>{{ PI | number:'1.0-2'}}</td>
       </tr> 
 
+      <tr>
+        <td>{{ a }}</td>
+        <td>percent</td>
+        <td>{{ a | percent}}</td>
+      </tr> 
+
+      <tr>
+        <td>{{ a }}</td>
+        <td>percent:'2.2-2'</td>
+        <td>{{ a | percent:'2.2-2'}}</td>
+      </tr> 
+
+      <tr>
+        <td>{{ salario }}</td>
+        <td>currency</td>
+        <td>{{ salario | currency}}</td>
+      </tr>
+
+      <tr>
+        <td>{{ salario }}</td>
+        <td>currency:'COP'</td>
+        <td>{{ salario | currency:'COP'}}</td>
+      </tr>
+
+      <tr>
+        <td>{{ salario }}</td>
+        <td>currency:'EUR':true</td>
+        <td>{{ salario | currency:'EUR':true}}</td>
+      </tr>
+
+      <tr>
+        <td>{{ salario }}</td>
+        <td>currency:'EUR':true:'4.0-0'</td>
+        <td>{{ salario | currency:'EUR':true:'4.0-0'}}</td>
+      </tr>
+
+      <tr>
+        <td>{{ valorPromesa }}</td>
+        <td>async</td>
+        <td>{{ valorPromesa | async}}</td>
+      </tr>
+
+      <tr>
+        <td>{{ fecha }}</td>
+        <td>date:'fulldate'</td>
+        <td>{{ fecha | date:'fullDate'}}</td>
+      </tr>
+
+      <tr>
+        <td>{{ nombre2 }}</td>
+        <td>capitalize</td>
+        <td>{{ nombre2 | capitalizado:false }}</td>
+      </tr>
+
     </tbody>
   </table>
-
+  <h4>JSON</h4>
+  <pre>
+    {{heroe | json}}
+  </pre>
+  <br />
   <ul>
     <li *ngFor="let item of arreglo | slice:5:20">
       {{ item }}
     </li>
   </ul>
+
+<h4>YouTube</h4>
+<br />
+<iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/'"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 </div>
 
 
