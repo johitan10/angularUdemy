@@ -112,6 +112,16 @@
         <td>{{ nombre2 | capitalizado:false }}</td>
       </tr>
 
+      <tr>
+        <td>{{ nombre2 }}</td>
+        <td>
+          contrasena:{{activar}}
+          <button type="button" (click)="activar = !activar" class="btn btn-primary btn block">Activar/Desactivar</button>
+        </td>
+        <td>{{ nombre2 | contrasena:activar }}</td>
+      </tr>
+
+
     </tbody>
   </table>
   <h4>JSON</h4>

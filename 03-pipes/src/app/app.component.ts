@@ -20,6 +20,8 @@ export class AppComponent {
 
   salario = 1234.5;
 
+  activar:boolean = true;
+
   video = 't2WfrmI9cEM';
   
   heroe = {
