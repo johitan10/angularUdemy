@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "spotify": {
+    "spotyapp": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/spotify",
+            "outputPath": "dist/spotyapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "spotify:build"
+            "browserTarget": "spotyapp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "spotify:build:production"
+              "browserTarget": "spotyapp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "spotify:build"
+            "browserTarget": "spotyapp:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "spotify-e2e": {
+    "spotyapp-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "spotify:serve"
+            "devServerTarget": "spotyapp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "spotify:serve:production"
+              "devServerTarget": "spotyapp:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "spotify"
+  "defaultProject": "spotyapp"
 }
