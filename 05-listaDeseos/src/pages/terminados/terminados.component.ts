@@ -1,9 +1,10 @@
 import { Component } from "@angular/core";
+import { DeseosService } from "../../providers/deseos.service";
 
 @Component({
-                  selector: 'page-terminados',
-                  templateUrl : 'terminados.component.html'
+   selector: 'page-terminados',
+   templateUrl: 'terminados.component.html'
 })
 export class TerminadosPage {
-                  constructor(){}
+   constructor(public desesosService: DeseosService) { }
 }
