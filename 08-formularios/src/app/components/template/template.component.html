@@ -1,0 +1,94 @@
+<h4>Formularios <small>template</small></h4>
+<hr>
+<form novalidate #forma="ngForm" (ngSubmit)="guardar(forma)" ngForm>
+  <div>
+    <div class="form-group row has-error">
+      <label class="col-2 col-form-label">Nombre</label>
+      <div class="col-8">
+        <input class="form-control" type="text" placeholder="Nombre" name="nombre" minlength="3" required [(ngModel)]="usuario.nombre"
+          #nombre="ngModel" />
+        <div *ngIf="nombre.errors?.required" class="invalid-feedback">
+          El campo es requerido
+        </div>
+        <div *ngIf="nombre.errors?.minlength" class="invalid-feedback">
+          El campo require por lo menos {{nombre.errors.minlength.requiredLength}} caracteres
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Apellido</label>
+      <div class="col-8">
+        <input class="form-control" type="text" placeholder="Apellido" name="apellido" required [(ngModel)]="usuario.apellido"
+          #apellido="ngModel">
+        <div *ngIf="apellido.errors?.required" class="invalid-feedback">
+          El campo es requerido
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Correo</label>
+    <div class="col-md-8">
+      <input class="form-control" type="email" placeholder="Correo electrónico" name="correo" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+        [(ngModel)]="usuario.correo" #correo="ngModel">
+      <div *ngIf="correo.errors?.required" class="invalid-feedback">
+        El campo es requerido
+      </div>
+      <div *ngIf="correo.errors?.pattern" class="invalid-feedback">
+        El correo no contiene un formato valido
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Pais</label>
+    <div class="col-md-8">
+      <select class="form-control" name="pais" [(ngModel)]="usuario.pais">
+        <option value="">Seleccione un pais</option>
+        <option *ngFor="let pais of paises" [value]="pais.codigo">{{pais.nombre}}</option>
+      </select>
+
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Sexo</label>
+    <div class="col-md-8">
+
+      <div class="form-check form-check-inline" *ngFor="let se of sexos">
+        <input [(ngModel)]="usuario.sexo" [value]="se" class="form-check-input" type="radio" name="sexo" id="inlineRadio1"
+          value="Hombre">
+        <label class="form-check-label" for="inlineRadio1">{{se}}</label>
+      </div>
+      <!-- <div class="form-check form-check-inline">
+            <input  [(ngModel)]="usuario.sexo" class="form-check-input" type="radio" name="sexo" value="Mujer">
+            <label class="form-check-label" for="inlineRadio2">Mujer</label>
+          </div> -->
+
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+        <div class="form-check">
+            <input required class="form-check-input" type="checkbox" name="acepta" [(ngModel)]="usuario.acepta">
+            <label class="form-check-label" for="defaultCheck1">
+              Acepta Terminos
+            </label>
+          </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary" [disabled]="!forma.valid">
+        Guardar
+      </button>
+    </div>
+  </div>
+</form>
+
+<pre>
+  {{usuario | json}}
+</pre>
