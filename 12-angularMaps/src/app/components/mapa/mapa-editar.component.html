@@ -1,0 +1,12 @@
+<form [formGroup]="formulario">
+  <mat-form-field >
+    <input matInput placeholder="Titulo" formControlName="titulo">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea rows="3" matInput placeholder="Descripcion" formControlName="descripcion"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="guardarCambios()">Editar</button>
+  <button mat-raised-button color="warn" (click)="onNoClick()" type="button">Cancelar</button>
+</form>

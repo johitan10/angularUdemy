@@ -1,0 +1,15 @@
+<div class="container m-5">
+  <h1>Gráficos Dinámicos <small>Angular</small></h1>
+  <hr>
+  <nav class="nav nav-pills nav-fill">
+    <a class="nav-item nav-link" (click)="seleccionarTab(1)" [ngClass]="{'active': seleccionada == 1}">Linea</a>
+    <a class="nav-item nav-link" (click)="seleccionarTab(2)" [ngClass]="{'active': seleccionada == 2}">Barras</a>
+    <a class="nav-item nav-link" (click)="seleccionarTab(3)" [ngClass]="{'active': seleccionada == 3}">Donas</a>
+    <a class="nav-item nav-link" (click)="seleccionarTab(4)" [ngClass]="{'active': seleccionada == 4}">Radar</a>
+  </nav>
+  
+  <app-linea *ngIf="seleccionada == 1" class="m-5"></app-linea>
+  <app-barras *ngIf="seleccionada == 2" class="m-5"></app-barras>
+  <app-donas *ngIf="seleccionada == 3" class="m-5"></app-donas>
+  <app-radar *ngIf="seleccionada == 4" class="m-5"></app-radar>
+</div>
