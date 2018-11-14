@@ -7,7 +7,8 @@ import { DetalleComponent } from "./components/detalle/detalle.component";
 export const APP_ROUTES:Routes = [
     { path:'home', component : HomeComponent },
     { path:'buscar', component :BuscadorComponent },
-    { path:'detalle/:id', component :DetalleComponent },
+    { path:'buscar/:texto', component :BuscadorComponent },
+    { path:'detalle/:id/:pag', component :DetalleComponent },
     { path:'', pathMatch:'full', redirectTo: 'home' },
     { path:'**', pathMatch:'full', redirectTo: 'home' }  
 ]

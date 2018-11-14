@@ -1,3 +1,14 @@
-<p>
-  home works!
-</p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Peliculas App</h1>
+    <p class="lead">Aplicacion que muestra peliculas</p>
+  </div>
+</div>
+
+<div class="container">
+  <app-galeria [peliculas]="cartelera | slice:0:6" titulo="Películas en cartelera"></app-galeria>
+  <br>
+  <app-galeria [peliculas]="populares | slice:0:6" titulo="Películas populares"></app-galeria>
+  <br>
+  <app-galeria [peliculas]="popularesNinos | slice:0:6" titulo="Películas populares para niños"></app-galeria>
+</div>
