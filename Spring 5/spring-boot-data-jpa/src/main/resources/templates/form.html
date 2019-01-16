@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text=${titulo}></title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">JPA</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link"
+					th:href="@{/listar}">Clientes<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item"><a class="nav-link" th:href="@{/form}">Nuevo</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container m-5">
+		<h1 th:text="${titulo}" class="text-primary"></h1>
+		<form th:action="@{/form}" th:object="${cliente}" method="post">
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Nombre</label>
+				<div class="col-sm-10">
+					<input type="text" th:field="*{nombre}" class="form-control" />
+					<small class="form-text text-danger" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small>
+				</div>
+				
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Apellido</label>
+				<div class="col-sm-10">
+					<input type="text" th:field="*{apellido}" class="form-control" /> <small class="form-text text-danger"
+						th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></small>
+				</div>
+				
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Email</label>
+				<div class="col-sm-10">
+					<input type="text" th:field="*{correo}" class="form-control" />
+					<small class="form-text text-danger" th:if="${#fields.hasErrors('correo')}" th:errors="*{correo}"></small>
+				</div>
+				
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Fecha creaci&oacute;n</label>
+				<div class="col-sm-10">
+					<input type="text" th:field="*{fechaCreacion}" class="form-control" />
+					<small class="form-text text-danger" th:if="${#fields.hasErrors('fechaCreacion')}" th:errors="*{fechaCreacion}"></small>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-12 text-center">
+					<input type="submit" value="Crear Cliente" class="btn btn-primary" />
+				</div>
+			</div>
+<!-- 			<input type="hidden" th:field="*{id}" /> -->
+		</form>
+	</div>
+</body>
+</html>
