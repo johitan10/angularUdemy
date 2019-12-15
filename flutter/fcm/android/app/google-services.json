@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "123977381308",
+    "firebase_url": "https://platziflutter-f0abd.firebaseio.com",
+    "project_id": "platziflutter-f0abd",
+    "storage_bucket": "platziflutter-f0abd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123977381308:android:1412b1bbf3ce39393427b9",
+        "android_client_info": {
+          "package_name": "co.com.johan.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123977381308-fh1sp3h83nlick7dp8soh3ofajhfaed5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.com.johan.fcm",
+            "certificate_hash": "c841ff3219d509f67ce5dc27ffcb6689bf8083d6"
+          }
+        },
+        {
+          "client_id": "123977381308-tikcultkdt3ne6e3ib1fvr3jlds30bud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Z3Gl64d_ZgY0Pl9GzU-Gf5oHlX_IS7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123977381308-tikcultkdt3ne6e3ib1fvr3jlds30bud.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123977381308:android:101cd9510955e25b3427b9",
+        "android_client_info": {
+          "package_name": "com.example.platzifirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123977381308-7m9377i8m7mbs323jjcoofeciph6ja5d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.platzifirebase",
+            "certificate_hash": "c841ff3219d509f67ce5dc27ffcb6689bf8083d6"
+          }
+        },
+        {
+          "client_id": "123977381308-tikcultkdt3ne6e3ib1fvr3jlds30bud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Z3Gl64d_ZgY0Pl9GzU-Gf5oHlX_IS7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123977381308-tikcultkdt3ne6e3ib1fvr3jlds30bud.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

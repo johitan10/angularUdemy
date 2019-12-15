@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "275636151698",
+    "firebase_url": "https://flutter-f1325.firebaseio.com",
+    "project_id": "flutter-f1325",
+    "storage_bucket": "flutter-f1325.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275636151698:android:7e102a6d8582753b20cd4b",
+        "android_client_info": {
+          "package_name": "co.com.foody"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275636151698-6185cktrsutl1r8d923pombkrmc223fr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0CzBbM4tx4mduObXxGMWyrrmauF65Mfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275636151698-6185cktrsutl1r8d923pombkrmc223fr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
